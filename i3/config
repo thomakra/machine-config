@@ -1,5 +1,10 @@
 set $mod Mod4
 
+# i3-gaps
+gaps inner 10 px
+gaps outer 1 px
+smart_gaps on
+
 # Remove borders
 for_window [class="^.*"] border pixel 0
 
@@ -139,7 +144,10 @@ bar {
         tray_output primary
 }
 
-exec --no-startup-id feh --bg-scale ~/Dropbox/Config/Wallpapers/skysong2.jpg
+#exec xrandr --output VIRTUAL1 --off --output eDP1 --mode 2560x1440 --pos 3840x680 --rotate normal --output DP1 --off --output HDMI2 --primary --mode 3840x2160 --pos 0x0 --rotate normal --output HDMI1 --off --output DP2 --off
+exec xrandr --output eDP-1 --mode 2560x1440 --pos 3840x680 --rotate normal --output HDMI-2 --primary --mode 3840x2160 --pos 0x0 --rotate normal
+
+exec --no-startup-id feh --bg-scale ~/Dropbox/Config/Wallpapers/stars4k.jpg
 
 # https://github.com/baskerville/bspwm/issues/52
 exec wmname LG3D
@@ -147,3 +155,8 @@ exec wmname LG3D
 exec synapse
 exec nm-applet
 exec compton -b
+exec --no-startup-id dropbox
+
+# Prevent nautilus from showing desktop
+exec gsettings set org.gnome.desktop.background show-desktop-icons false
+
