@@ -1,8 +1,8 @@
 set $mod Mod4
 
 # i3-gaps
-gaps inner 10 px
-gaps outer 1 px
+gaps inner 7
+gaps outer 0
 smart_gaps on
 
 # Remove borders
